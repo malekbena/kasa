@@ -1,0 +1,8 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin defaultMargin {
+    margin: 0 100px;
+}

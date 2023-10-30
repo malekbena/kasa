@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 45px;
+    @include defaultMargin;
+    nav {
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 57px;
+            a {
+                color: $primary_color;
+                text-decoration: none;
+                text-transform: capitalize;
+            }
+        }
+        .active {
+            border-bottom: 1px $primary_color solid;
+        }
+    }
+}
