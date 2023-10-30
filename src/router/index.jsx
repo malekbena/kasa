@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     }
 ])
 
-function Root() {
+const Root = ()=> {
     return (
         <RouterProvider router={router} />
     );

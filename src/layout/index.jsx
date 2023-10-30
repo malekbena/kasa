@@ -1,19 +1,16 @@
-import '../App.css';
 import { Outlet } from 'react-router-dom';
-
-export default function Layout() {
-  return (
-    <div>
-      <header>
-        header
-          </header>
-          <div>
-              <Outlet />
-          </div>
-          <footer>
-              Footer
-          </footer>
-    </div>
-  );
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+const Layout = () => {
+    return (
+        <div>
+            <Navbar />
+            <div>
+                <Outlet />
+            </div>
+            <Footer />
+        </div>
+    );
 }
 
+export default Layout;
