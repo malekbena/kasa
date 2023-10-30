@@ -6,13 +6,13 @@ main {
   margin: 0 100px;
   padding: 50px 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   main {
     padding: 20px 0;
     margin: 0 20px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   main {
     margin: 0 50px;
   }
@@ -25,13 +25,13 @@ header {
   padding-top: 45px;
   margin: 0 100px;
 }
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   header {
     padding-top: 30px;
     margin: 0 50px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   header {
     padding-top: 20px;
     margin: 0 20px;
@@ -40,7 +40,7 @@ header {
 header img {
   height: 68px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   header img {
     height: 46px;
   }
@@ -51,7 +51,7 @@ header nav ul {
   list-style: none;
   gap: 57px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   header nav ul {
     gap: 26px;
   }
@@ -62,12 +62,12 @@ header nav ul a {
   text-decoration: none;
   text-transform: capitalize;
 }
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   header nav ul a {
     font-size: 18px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   header nav ul a {
     font-size: 12px;
   }
@@ -82,7 +82,7 @@ header nav ul .active {
   overflow: hidden;
   height: 223px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .banner {
     height: 111px;
   }
@@ -104,12 +104,24 @@ header nav ul .active {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
 }
+@media screen and (max-width: 767px) {
+  .banner_text {
+    justify-content: left;
+  }
+}
 .banner_text h2 {
   font-size: 48px;
   font-weight: 500;
   color: #FFFFFF;
+  margin: 0;
+  padding: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .banner_text h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 767px) {
   .banner_text h2 {
     font-size: 24px;
   }
@@ -123,6 +135,20 @@ header nav ul .active {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 60px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 0;
+  }
 }
 .cards article {
   border-radius: 10px;

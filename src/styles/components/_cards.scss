@@ -7,6 +7,17 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 60px;
 
+    @include mediumScreen {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    @include smallScreen {
+        display: flex;
+        flex-direction: column;
+        background-color: $white-color;
+        padding: 0;
+    }
+
     article {
         border-radius: 10px;
         overflow: hidden;
