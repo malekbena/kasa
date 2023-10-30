@@ -3,6 +3,28 @@
     justify-content: center;
     align-items: center;
 }
+
 @mixin defaultMargin {
     margin: 0 100px;
+}
+
+@mixin mdMargin {
+    margin: 0 50px;
+}
+
+@mixin smMargin {
+    margin: 0 20px;
+}
+
+@mixin smallScreen {
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+        @content;
+    }
+}
+
+@mixin mediumScreen {
+    @media screen and (max-width: map-get($breakpoints, md)) {
+        @content;
+        
+    }
 }

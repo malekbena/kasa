@@ -6,6 +6,17 @@ main {
   margin: 0 100px;
   padding: 50px 0;
 }
+@media screen and (max-width: 768px) {
+  main {
+    padding: 20px 0;
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  main {
+    margin: 0 50px;
+  }
+}
 
 header {
   display: flex;
@@ -14,18 +25,54 @@ header {
   padding-top: 45px;
   margin: 0 100px;
 }
+@media screen and (max-width: 992px) {
+  header {
+    padding-top: 30px;
+    margin: 0 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding-top: 20px;
+    margin: 0 20px;
+  }
+}
+header img {
+  height: 68px;
+}
+@media screen and (max-width: 768px) {
+  header img {
+    height: 46px;
+  }
+}
 header nav ul {
   display: flex;
   flex-direction: row;
   list-style: none;
   gap: 57px;
 }
+@media screen and (max-width: 768px) {
+  header nav ul {
+    gap: 26px;
+  }
+}
 header nav ul a {
+  font-size: 24px;
   color: #FF6060;
   text-decoration: none;
   text-transform: capitalize;
 }
-header nav .active {
+@media screen and (max-width: 992px) {
+  header nav ul a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header nav ul a {
+    font-size: 12px;
+  }
+}
+header nav ul .active {
   border-bottom: 1px #FF6060 solid;
 }
 
@@ -34,6 +81,11 @@ header nav .active {
   border-radius: 25px;
   overflow: hidden;
   height: 223px;
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 111px;
+  }
 }
 .banner img {
   width: 100%;
@@ -56,6 +108,11 @@ header nav .active {
   font-size: 48px;
   font-weight: 500;
   color: #FFFFFF;
+}
+@media screen and (max-width: 768px) {
+  .banner_text h2 {
+    font-size: 24px;
+  }
 }
 
 .cards {
