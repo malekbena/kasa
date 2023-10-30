@@ -2,6 +2,11 @@
   font-family: Montserrat, sans-serif;
 }
 
+main {
+  margin: 0 100px;
+  padding: 50px 0;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -22,4 +27,33 @@ header nav ul a {
 }
 header nav .active {
   border-bottom: 1px #FF6060 solid;
+}
+
+.banner {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 223px;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner_text {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.banner_text h2 {
+  font-size: 48px;
+  font-weight: 500;
+  color: #FFFFFF;
 }/*# sourceMappingURL=main.css.map */

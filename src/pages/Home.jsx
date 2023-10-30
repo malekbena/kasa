@@ -1,9 +1,13 @@
+import Banner from "../components/Banner"
+
+import homeBanner from "../assets/beach.png"
 
 const Home = () => {
   return (
-    <div>
-      Home Page
-    </div>
+    <>
+      <Banner img={homeBanner} txt={"Chez vous, partout et ailleurs"} />
+
+    </>
   );
 }
 
