@@ -8,7 +8,10 @@ import Housing from '../pages/Housing';
 const router = createBrowserRouter([
     {
         element: <Layout />,
-        errorElement: <NotFound />,
+        errorElement: (<Layout>
+            <NotFound />
+        </Layout>
+        ),
         children: [
             {
                 path: "/",
@@ -26,7 +29,7 @@ const router = createBrowserRouter([
     }
 ])
 
-const Root = ()=> {
+const Root = () => {
     return (
         <RouterProvider router={router} />
     );

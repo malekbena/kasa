@@ -1,8 +1,12 @@
-const  NotFound=()=> {
+import { NavLink } from "react-router-dom";
+
+const NotFound = () => {
     return (
-        <div>
-            404 Not found
-        </div>
+        <>
+            <h1>404</h1>
+            <p>Oups! La page que vous demandez n'existe pas</p>
+            <NavLink to="/">Retour sur la page d'accueil</NavLink>
+        </>
     );
 }
 
