@@ -6,3 +6,8 @@
 @import './layouts/_footer';
 @import './components/_banner';
 @import './components/_cards';
+
+* {
+    margin: 0;
+    padding: 0;
+}
