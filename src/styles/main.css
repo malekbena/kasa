@@ -230,6 +230,79 @@ footer p {
   padding: 0;
 }
 
+.collapse {
+  width: 100%;
+}
+.collapse_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #FF6060;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  border-radius: 5px;
+  z-index: 99;
+  position: relative;
+}
+.collapse_header h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.collapse_btn {
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 28px;
+  transition: transform 300ms ease-in-out;
+}
+.collapse_btn.active {
+  transform: rotate(-180deg);
+}
+.collapse_btn.inactive {
+  transform: rotate(0deg);
+}
+.collapse_body {
+  border-radius: 0 0 5px 5px;
+  background-color: #F6F6F6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 600ms ease-in-out;
+  margin-top: -10px;
+  position: relative;
+}
+.collapse_body p,
+.collapse_body ul {
+  padding: 30px 20px 20px 20px;
+  color: #FF6060;
+  font-size: 18px;
+  position: relative;
+  top: -500px;
+  transition: top 300ms ease-in-out;
+}
+.collapse_body p.active,
+.collapse_body ul.active {
+  top: 0;
+}
+.collapse_body p.inactive,
+.collapse_body ul.inactive {
+  top: -500px;
+}
+.collapse_body.active {
+  max-height: 500px;
+}
+.collapse_body.inactive {
+  max-height: 0;
+  transition: max-height 200ms ease-in-out;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 205px 50px 205px;
+  gap: 35px;
+}
+
 * {
   margin: 0;
   padding: 0;
