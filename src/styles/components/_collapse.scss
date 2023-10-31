@@ -11,12 +11,21 @@
         border-radius: 5px;
         z-index: 99;
         position: relative;
-        
+
 
 
         h2 {
+            @include flexCenter;
             font-size: 24px;
             font-weight: 500;
+
+            @include mediumScreen {
+                font-size: 20px;
+            }
+
+            @include smallScreen {
+                font-size: 18px;
+            }
         }
     }
 
@@ -31,6 +40,7 @@
         &.active {
             transform: rotate(-180deg);
         }
+
         &.inactive {
             transform: rotate(0deg);
         }
@@ -41,7 +51,7 @@
         background-color: $bg_primary;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 600ms ease-in-out; 
+        transition: max-height 600ms ease-in-out;
         margin-top: -10px;
         position: relative;
 
@@ -51,13 +61,15 @@
             padding: 30px 20px 20px 20px;
             color: $primary_color;
             font-size: 18px;
-            
+
             position: relative;
             top: -500px;
             transition: top 300ms ease-in-out;
+
             &.active {
                 top: 0;
             }
+
             &.inactive {
                 top: -500px;
             }
@@ -70,7 +82,7 @@
 
         &.inactive {
             max-height: 0;
-        transition: max-height 200ms ease-in-out; 
+            transition: max-height 200ms ease-in-out;
 
         }
     }

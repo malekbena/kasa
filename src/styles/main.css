@@ -245,8 +245,21 @@ footer p {
   position: relative;
 }
 .collapse_header h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 24px;
   font-weight: 500;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .collapse_header h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .collapse_header h2 {
+    font-size: 18px;
+  }
 }
 .collapse_btn {
   background-color: transparent;
@@ -299,8 +312,18 @@ footer p {
 .about {
   display: flex;
   flex-direction: column;
-  margin: 50px 205px 50px 205px;
+  margin: 50px 10% 50px 10%;
   gap: 35px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .about {
+    margin: 19px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about {
+    margin: 19px 0;
+  }
 }
 
 * {
