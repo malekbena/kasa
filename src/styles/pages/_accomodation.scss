@@ -40,4 +40,9 @@
         margin-top: 20px;
         margin-bottom: 24px;
     }
+    &_collapses {
+        display: flex;
+        flex-direction: row;
+        gap: 76px;
+    }
 }

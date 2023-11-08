@@ -3,6 +3,7 @@ import data from "../data/data.json";
 import Carousel from "../components/Carousel";
 import Tag from "../components/Tag";
 import Rating from "../components/Rating";
+import Collapse from "../components/Collapse";
 
 const Accomodation = () => {
   const { id } = useParams();
@@ -33,6 +34,10 @@ const Accomodation = () => {
           </div>
           <Rating rating={accomodation.rating} />
         </div>
+      </div>
+      <div className="accomodation_collapses">
+          <Collapse title="Description" desc={accomodation.description} accomodation />
+          <Collapse title="Equipements" list={accomodation.equipments} accomodation />
       </div>
     </div>
   );
