@@ -1,0 +1,42 @@
+.accomodation {
+    color: $primary-color;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+    &_box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 24px;
+    }
+
+    &_host {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            text-align: right;
+            overflow-wrap: break-word;
+        }
+    }
+
+    .tags {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 24px;
+    }
+}

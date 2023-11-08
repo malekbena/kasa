@@ -1,0 +1,14 @@
+.rating {
+    gap: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+    .innactive_star {
+        color: $secondary_color;
+    }
+    .fa-star {
+        height: 30px;
+        
+    }
+
+}
