@@ -21,8 +21,7 @@ const Accomodation = () => {
                   accomodation.tags.map((tag, index) => (
                     <Tag key={index} tag={tag} />
                   ))
-                  
-              }  
+                }
               </div>
             )
           }
@@ -32,7 +31,7 @@ const Accomodation = () => {
             <p> {accomodation.host.name} </p>
             <img src={accomodation.host.picture} alt="" />
           </div>
-          <Rating rating={accomodation.rating} />  
+          <Rating rating={accomodation.rating} />
         </div>
       </div>
     </div>
