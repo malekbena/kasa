@@ -249,6 +249,11 @@ footer p {
   z-index: 99;
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  .collapse_header {
+    padding: 5px 10px;
+  }
+}
 .collapse_header .title_page {
   display: flex;
   justify-content: center;
@@ -258,12 +263,12 @@ footer p {
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .collapse_header .title_page {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 767px) {
   .collapse_header .title_page {
-    font-size: 18px;
+    font-size: 13px;
   }
 }
 .collapse_header .title_accomodation {
@@ -272,6 +277,7 @@ footer p {
   align-items: center;
   font-size: 18px;
   font-weight: 500;
+  margin: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .collapse_header .title_accomodation {
@@ -485,12 +491,25 @@ footer p {
 .accomodation h2 {
   font-size: 36px;
   font-weight: 500;
+  margin-bottom: 15px;
 }
 .accomodation_box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 24px;
+  margin: 24px 0;
+}
+@media screen and (max-width: 767px) {
+  .accomodation_box {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px) {
+  .accomodation_block2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
 .accomodation_host {
   display: flex;
@@ -521,6 +540,12 @@ footer p {
   display: flex;
   flex-direction: row;
   gap: 76px;
+}
+@media screen and (max-width: 767px) {
+  .accomodation_collapses {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 * {
