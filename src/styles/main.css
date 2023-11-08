@@ -309,6 +309,74 @@ footer p {
   transition: max-height 200ms ease-in-out;
 }
 
+.carousel {
+  overflow: hidden;
+  border-radius: 25px;
+  position: relative;
+  height: 415px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .carousel {
+    height: 355px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .carousel {
+    height: 255px;
+  }
+}
+.carousel .cover {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carousel button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  height: 80px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .carousel button {
+    height: 60px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .carousel button {
+    height: 24px;
+  }
+}
+.carousel button img {
+  height: 100%;
+}
+.carousel #carouselRight {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  padding: 0 25px;
+}
+.carousel #carouselLeft {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  padding: 0 25px;
+}
+.carousel .carousel_count {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .about {
   display: flex;
   flex-direction: column;

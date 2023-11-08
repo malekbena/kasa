@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <Banner img={homeBanner} txt={"Chez vous, partout et ailleurs"} />
-      <Cards housings={data} />
+      <Cards accomodations={data} />
     </>
   );
 }

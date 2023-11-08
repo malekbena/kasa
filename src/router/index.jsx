@@ -3,7 +3,7 @@ import Layout from '../layout';
 import Error404 from '../pages/Error404';
 import Home from '../pages/Home';
 import About from '../pages/About';
-import Housing from '../pages/Housing';
+import Accomodation from '../pages/Accomodation';
 
 const router = createBrowserRouter([
     {
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/logement/:id",
-                element: <Housing />,
+                element: <Accomodation />,
             }
         ]
     }

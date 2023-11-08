@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
 
-const Cards = ({ housings }) => {
+const Cards = ({ accomodations }) => {
     return (
         <>
             {
-                housings && (
+                accomodations && (
 
                     <div className="cards">
-                        {housings.map((data) => {
+                        {accomodations.map((data) => {
                             return (
                                 <article key={data.id}>
                                     <NavLink to={`/logement/${data.id}`}>
