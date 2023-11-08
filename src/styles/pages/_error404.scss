@@ -1,0 +1,21 @@
+.error404 {
+    @include flexCenter;
+    flex-direction: column;
+    gap: 139px;
+    margin: 90px 0;
+    color: $primary-color;
+    h1 {
+        font-size: 288px;
+        font-weight: 700;
+    }
+    p {
+        font-size: 36px;
+        font-weight: 500;
+    }
+    a {
+        font-size: 18px;
+        font-weight: 500;
+        color: $primary-color;
+        
+    }
+}

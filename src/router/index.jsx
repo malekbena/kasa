@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from '../layout';
-import NotFound from '../pages/NotFound';
+import Error404 from '../pages/Error404';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Housing from '../pages/Housing';
@@ -9,7 +9,7 @@ const router = createBrowserRouter([
     {
         element: <Layout />,
         errorElement: (<Layout>
-            <NotFound />
+            <Error404 />
         </Layout>
         ),
         children: [
