@@ -8,9 +8,10 @@ import Accomodation from '../pages/Accomodation';
 const router = createBrowserRouter([
     {
         element: <Layout />,
-        errorElement: (<Layout>
-            <Error404 />
-        </Layout>
+        errorElement: (
+            <Layout>
+                <Error404 />
+            </Layout>
         ),
         children: [
             {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
             {
                 path: "/logement/:id",
                 element: <Accomodation />,
-            }
+            },
         ]
     }
 ])
