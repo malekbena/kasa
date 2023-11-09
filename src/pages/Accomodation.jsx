@@ -1,18 +1,32 @@
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import data from "../data/data.json";
 import Carousel from "../components/Carousel";
 import Tag from "../components/Tag";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
-import Error404 from "./Error404";
 
 const Accomodation = () => {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [accomodation, setAccomodation] = useState()
   const { id } = useParams();
-  const accomodation = data.find((housing) => housing.id === id);
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    let res = data.find((accomodation) => accomodation.id === id)
+    setAccomodation(res)
+    setIsLoaded(true)
+    if (!res) {
+      navigate('/404')
+    }
+
+  }, [accomodation, isLoaded, id, navigate])
+
+
   return (
     <>
       {
-        accomodation ? (
+        isLoaded &&
         <div className="accomodation">
           <Carousel data={accomodation.pictures} />
           <div className="accomodation_box">
@@ -44,7 +58,6 @@ const Accomodation = () => {
             <Collapse title="Equipements" list={accomodation.equipments} accomodation />
           </div>
         </div>
-        ) : <Error404 />
       }
     </>
   );
