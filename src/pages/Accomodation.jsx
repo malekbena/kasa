@@ -14,13 +14,13 @@ const Accomodation = () => {
 
   useEffect(() => {
     let res = data.find((accomodation) => accomodation.id === id)
-    setAccomodation(res)
-    setIsLoaded(true)
     if (!res) {
       navigate('/404')
     }
+    setAccomodation(res)
+    setIsLoaded(true)
 
-  }, [accomodation, isLoaded, id, navigate])
+  }, [id, navigate])
 
 
   return (
