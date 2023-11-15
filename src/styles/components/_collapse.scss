@@ -1,4 +1,4 @@
-.collapse {
+ .collapse {
     width: 100%;
 
     &_headerPage {
@@ -7,6 +7,9 @@
 
     &_headerAccomodation {
         border-radius: 10px;
+        @include smallScreen {
+            border-radius: 5px;
+        }
     }
 
     &_header {
@@ -61,6 +64,9 @@
         cursor: pointer;
         font-size: 28px;
         transition: transform 300ms ease-in-out;
+        @include smallScreen {
+            font-size: 20px; 
+        }
 
         &.active {
             transform: rotate(-180deg);

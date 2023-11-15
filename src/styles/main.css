@@ -239,6 +239,11 @@ footer p {
 .collapse_headerAccomodation {
   border-radius: 10px;
 }
+@media screen and (max-width: 767px) {
+  .collapse_headerAccomodation {
+    border-radius: 5px;
+  }
+}
 .collapse_header {
   display: flex;
   flex-direction: row;
@@ -296,6 +301,11 @@ footer p {
   cursor: pointer;
   font-size: 28px;
   transition: transform 300ms ease-in-out;
+}
+@media screen and (max-width: 767px) {
+  .collapse_btn {
+    font-size: 20px;
+  }
 }
 .collapse_btn.active {
   transform: rotate(-180deg);
@@ -558,6 +568,11 @@ footer p {
 .accomodation {
   color: #FF6060;
 }
+@media screen and (max-width: 767px) {
+  .accomodation {
+    padding-bottom: 10px;
+  }
+}
 .accomodation h2 {
   font-size: 36px;
   font-weight: 500;
@@ -658,6 +673,7 @@ footer p {
   display: flex;
   flex-direction: row;
   gap: 76px;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 767px) {
   .accomodation_collapses {
