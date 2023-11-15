@@ -1,14 +1,28 @@
+import { useState, useEffect } from "react";
 import Banner from "../components/Banner"
 import Cards from "../components/Cards";
+import { getData } from "../util"
 
-import data from "../data/data.json"
 import homeBanner from "../assets/beach.png"
 
 const Home = () => {
+  const [data, setData] = useState([])
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    getData("/api/data.json").then((data) => {
+      setData(data)
+      setIsLoaded(true)
+    })
+  }, []);
+
   return (
     <>
       <Banner img={homeBanner} txt={"Chez vous, partout et ailleurs"} />
-      <Cards accomodations={data} />
+      {
+        isLoaded && data &&
+        <Cards accomodations={data} />
+      }
     </>
   );
 }

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import data from "../data/data.json";
+// import data from "../data/data.json";
 import Carousel from "../components/Carousel";
 import Tag from "../components/Tag";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
+import { getData } from "../util"
 
 const Accomodation = () => {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -13,12 +14,14 @@ const Accomodation = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    let res = data.find((accomodation) => accomodation.id === id)
-    if (!res) {
-      navigate('/404')
-    }
-    setAccomodation(res)
-    setIsLoaded(true)
+    getData('/api/data.json').then((data) => {
+      let res = data.find((accomodation) => accomodation.id === id)
+      if (!res) {
+        navigate('/404')
+      }
+      setAccomodation(res)
+      setIsLoaded(true)
+    })
 
   }, [id, navigate])
 
