@@ -5,16 +5,38 @@
         font-size: 36px;
         font-weight: 500;
         margin-bottom: 15px;
+
+        @include mediumScreen {
+            font-size: 24px;
+        }
+
+        @include smallScreen {
+            font-size: 18px;
+        }
     }
 
     &_box {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin: 24px 0 ;
+        margin: 24px 0;
 
         @include smallScreen {
             flex-direction: column;
+        }
+    }
+
+    &_block1 {
+        p {
+            font-size: 18px;
+
+            @include mediumScreen {
+                font-size: 16px;
+            }
+
+            @include smallScreen {
+                font-size: 14px;
+            }
         }
     }
 
@@ -37,15 +59,34 @@
             width: 64px;
             height: 64px;
             border-radius: 50%;
+
+            @include mediumScreen {
+                width: 48px;
+                height: 48px;
+            }
+
+            @include smallScreen {
+                width: 32px;
+                height: 32px;
+            }
         }
+
         p {
             font-size: 18px;
             font-weight: 500;
             text-align: right;
             width: 90px;
+            @include mediumScreen {
+                font-size: 16px;
+                width: 70px;
+            }
+            @include smallScreen {
+                font-size: 12px;
+                width: 50px;
+            }
         }
     }
-    
+
 
     .tags {
         display: flex;
@@ -53,7 +94,9 @@
         gap: 10px;
         margin-top: 20px;
         margin-bottom: 24px;
+        flex-wrap: wrap;
     }
+
     &_collapses {
         display: flex;
         flex-direction: row;

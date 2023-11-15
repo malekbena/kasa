@@ -431,6 +431,17 @@ footer p {
   justify-content: center;
   padding: 4px 30px;
 }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .tag {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .tag {
+    font-size: 10px;
+    padding: 4px 20px;
+  }
+}
 
 .rating {
   gap: 10px;
@@ -438,11 +449,29 @@ footer p {
   display: flex;
   justify-content: end;
 }
+@media screen and (max-width: 767px) {
+  .rating {
+    margin-top: 0;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .rating .innactive_star {
   color: #E3E3E3;
 }
 .rating .fa-star {
   font-size: 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .rating .fa-star {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .rating .fa-star {
+    font-size: 16px;
+  }
 }
 
 .about {
@@ -534,6 +563,16 @@ footer p {
   font-weight: 500;
   margin-bottom: 15px;
 }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .accomodation h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .accomodation h2 {
+    font-size: 18px;
+  }
+}
 .accomodation_box {
   display: flex;
   flex-direction: row;
@@ -543,6 +582,19 @@ footer p {
 @media screen and (max-width: 767px) {
   .accomodation_box {
     flex-direction: column;
+  }
+}
+.accomodation_block1 p {
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .accomodation_block1 p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .accomodation_block1 p {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -564,11 +616,35 @@ footer p {
   height: 64px;
   border-radius: 50%;
 }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .accomodation_host img {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .accomodation_host img {
+    width: 32px;
+    height: 32px;
+  }
+}
 .accomodation_host p {
   font-size: 18px;
   font-weight: 500;
   text-align: right;
   width: 90px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .accomodation_host p {
+    font-size: 16px;
+    width: 70px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .accomodation_host p {
+    font-size: 12px;
+    width: 50px;
+  }
 }
 .accomodation .tags {
   display: flex;
@@ -576,6 +652,7 @@ footer p {
   gap: 10px;
   margin-top: 20px;
   margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 .accomodation_collapses {
   display: flex;
