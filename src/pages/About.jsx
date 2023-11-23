@@ -24,7 +24,7 @@ const About = () => {
                 {
                     isLoaded && data &&
                     data.map((data, index) => (
-                        <Collapse key={index} title={data.title} desc={data.description} />
+                        <Collapse key={index} title={data.title} desc={data.description} className={'collapse_headerPage'} />
                     ))
                 }
             </div>

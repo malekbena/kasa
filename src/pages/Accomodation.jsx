@@ -57,8 +57,8 @@ const Accomodation = () => {
             </div>
           </div>
           <div className="accomodation_collapses">
-            <Collapse title="Description" desc={accomodation.description} accomodation />
-            <Collapse title="Equipements" list={accomodation.equipments} accomodation />
+            <Collapse title="Description" desc={accomodation.description} accomodation className={'collapse_headerAccomodation'} />
+            <Collapse title="Equipements" list={accomodation.equipments} accomodation className={'collapse_headerAccomodation'} />
           </div>
         </div>
       }

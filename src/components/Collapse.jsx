@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
-const Collapse = ({ title, desc, list, accomodation }) => {
+const Collapse = ({ title, desc, list, accomodation, className }) => {
     const [isOpen, setIsOpen] = useState(false)
 
     const toggleCollapse = (e) => {
@@ -12,8 +12,8 @@ const Collapse = ({ title, desc, list, accomodation }) => {
 
     return (
         <div className="collapse">
-            <div className={`collapse_header ${accomodation ? "collapse_headerAccomodation" : "collapse_headerPage"}`}>
-                <h2 className={accomodation ? "title_accomodation" : "title_page"}>{title}</h2>
+            <div className={`collapse_header ${className}`}>
+                <h2 className='title'>{title}</h2>
                 <button className={`collapse_btn ${isOpen ? "active" : "inactive"}`} onClick={(e) => { toggleCollapse(e) }}>
                     <FontAwesomeIcon icon={faChevronUp} />
                 </button>
