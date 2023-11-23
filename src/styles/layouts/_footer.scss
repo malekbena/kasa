@@ -6,13 +6,15 @@ footer {
     padding: 66px 0 29px 0;
     gap: 28px;
     width: 100%;
-
+    
     @include mediumScreen {
         gap: 20px;
     }
-
+    
     @include smallScreen {
         gap: 16px;
+        margin-top: auto;
+        margin-bottom: -10px;
     }
 
     img{
